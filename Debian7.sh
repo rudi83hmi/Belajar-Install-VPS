@@ -25,8 +25,6 @@ cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
 # remove unused
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
-apt-get -y --purge remove sendmail*;
-apt-get -y --purge remove bind9*;
 
 # update
 apt-get update; apt-get -y upgrade;
@@ -65,7 +63,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/borneocyberphreak/Auto-Installer-VPS-debian7-32bit/master/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<pre>Setup by Borneo Cyber Phreak | www.borneocyberphreak.tk</pre>" > /home/vps/public_html/index.html
+echo "<pre>Setup by Borneo Cyber Phreak | www.boltsuper4g.ml</pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/borneocyberphreak/Auto-Installer-VPS-debian7-32bit/master/vps.conf"
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
@@ -182,7 +180,7 @@ echo; echo -n 'Creating cron to run script every minute.....(Default setting)'
 echo '.....done'
 echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
-echo 'Please send in your comments and/or suggestions to borneocyberphreak@gmail.com'
+echo 'Please send in your comments and/or suggestions to msomerchant@yahoo.co.id'
 
 # install squid3
 apt-get -y install squid3
@@ -303,7 +301,7 @@ echo -e "\e[36;1m =[Webmin   : http://$MYIP:10000/]="  | tee -a log-install.txt
 echo -e "\e[36;1m =[Timezone : Asia/Jakarta (GMT +7)]="  | tee -a log-install.txt
 echo -e "\e[36;1m =[IPv6     : [off]]="  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo -e "\e[37;1m =[Borneo Cyber Phreak | www.borneocyberphreak.tk]="  | tee -a log-install.txt
+echo -e "\e[37;1m =[Borneo Cyber Phreak | boltsuper4g.ml]="  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo -e "\e[37;1m =[Log Instalasi --> /root/log-install.txt]="  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
